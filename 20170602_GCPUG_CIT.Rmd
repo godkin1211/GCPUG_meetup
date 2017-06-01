@@ -1,0 +1,172 @@
+---
+title: "Google Genomics API初探"
+author: |
+    | Michael Nostalgie 
+    | LightUp Biotech Co., Ltd.
+date: June 2, 2017
+output: 
+  revealjs::revealjs_presentation:
+    theme: moon
+    center: true
+    self_contained: false
+    reveal_plugins: ["notes"]
+    reveal_options:
+      slideNumber: true
+---
+
+# Google Genomics API... Wait! Genomics?!
+
+## Google Genomics
+![](img/google_genomics_url.png)
+
+## 放入括弧，存而不論
+
+## Bioinformatics
+![](img/background.jpg)
+
+# Basic Biology
+
+## From human body to DNA
+![](img/organism2dna.jpg)
+
+## DNA
+![](img/dna.jpg)
+
+## Analogy between biology and computer science
+
+<div style="width=560px; height=400px">
+![https://www.youtube.com/watch?v=9nN3ylYiHSw](img/dna2programming.png)
+</div>
+
+## Human Genome Project
+![](img/the_human_genome_project.jpg)
+
+## Is it the end?
+
+## How does genetic variation affect us?
+![](img/genetic_variation.jpg)
+
+## Central dogma
+
+<iframe width="720" height="480" src="https://www.youtube.com/embed/IjRgC7YYD-M" frameborder="0" allowfullscreen></iframe>
+
+## Encoding
+
+![](img/encode.jpg)
+
+## Nonsense mutation
+![](img/Nonsense.jpg)
+
+## Mis-sense mutation
+![](img/Missense.jpg)
+
+## Frame-shift mutation
+![](img/Frameshift.jpg)
+
+## 體質
+
+## Genetic variant of ALDH2 makes us get a red face after alcohol
+
+![](img/tichi_3.png)
+
+## Some drugs works for parts of people
+
+![](img/tichi_2.jpg)
+
+
+# Precision Medicine {data-background="img/obama.jpg"}
+
+## Beginning of the story
+![](img/beatface.png)
+
+## The advantages of sequencing technologies
+
+![](img/cost.jpg)
+
+## Growth of sequencing data
+![](img/journal.pbio.1002195.g001.png)
+
+
+## {data-background="black"}
+![](img/databooming.jpg)
+
+## DNA rain
+![](img/genes_to_cells.jpg)
+
+## Data center?
+
+### To build or not to build, it's a question.
+
+# Cloud
+
+##
+### Large bio-data sets should be stored in cloud services
+![](img/cloud.png)
+
+##
+### Faster and cheaper
+![](img/faster_and_cheaper.png)
+
+## Google Cloud Platform & Google Genomics
+![](img/gcp_and_google_genomics.png)
+![](img/google_genomics_wp.png)
+
+## MSSNG Project (Autism)
+![](img/mssng.png)
+
+## Million Veteran Project
+![](img/veteran.png)
+
+## Cancer investigation
+![](img/isb.png)
+
+## Other applications
+![](img/companies_using_GCP_and_GenomicsAPI.png)
+
+## How Google Genomics works
+![](img/google_genomics.png)
+
+# How to use Googe Genomics API?
+
+## 
+### 萬里之行，始於足下
+### 要拿到Genetic variants也得從raw reads開始
+
+## 
+### Whole genome sequencing data analysis workflow
+![](img/pipeline.png)
+DOI: 10.1101/035295
+
+## [Pipeline](https://cloud.google.com/genomics/v1alpha2/pipelines)
+![](img/ppp.png)
+
+## [Cookbook](http://googlegenomics.readthedocs.io/en/latest/)
+![](img/cookbook.png)
+
+## [ISB-CGC-pipelines](https://github.com/isb-cgc/ISB-CGC-pipelines)
+![](img/isb_cgc_pipeline.png)
+
+## Workflow Languages
+
+> + CWL (Common Workflow Language)
+> + WDL (Workflow Description Language)
+> + Others (Makefile, Snakemake, Nextflow and so on)
+> + Discussion on [reddit](https://www.reddit.com/r/bioinformatics/comments/4gvou4/experiences_with_workflow_specification_and/)
+
+## [WDL](https://software.broadinstitute.org/wdl/)
+![](img/wdl.png)
+
+## WDL初探
+![](img/wdl_workflow.jpg)
+
+## 
+### What is the next? Speed up genomic medicine with AI?
+![](img/cloudml.png)
+
+# Bioinformatics-related community
+
+## Taipei Bioinformatics Omnibus (北-BiO)
+![](img/beibio.png)
+
+### 社群宗旨：整合、共享、教育、發展
+
