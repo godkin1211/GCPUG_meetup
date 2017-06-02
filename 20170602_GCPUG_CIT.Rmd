@@ -7,6 +7,7 @@ date: June 2, 2017
 output: 
   revealjs::revealjs_presentation:
     theme: moon
+    hightlight: pygments
     center: true
     self_contained: false
     reveal_plugins: ["notes"]
@@ -32,16 +33,25 @@ output:
 ## DNA
 ![](img/dna.jpg)
 
-## Analogy between biology and computer science
-
+##
+### Analogy between biology and computer science
+From [PyCon 2017](https://www.youtube.com/watch?v=9nN3ylYiHSw)
 <div style="width=560px; height=400px">
-![https://www.youtube.com/watch?v=9nN3ylYiHSw](img/dna2programming.png)
+![](img/dna2programming.png)
 </div>
 
 ## Human Genome Project
 ![](img/the_human_genome_project.jpg)
 
+### 13 years, $3-billion!
+
+
 ## Is it the end?
+
+## Genetic variation
+![](img/faces.jpg)
+
+##### From [https://blogluengo.blogspot.tw/2012/08/las-mujeres-de-shakespeare.html](https://blogluengo.blogspot.tw/2012/08/las-mujeres-de-shakespeare.html)
 
 ## How does genetic variation affect us?
 ![](img/genetic_variation.jpg)
@@ -65,23 +75,29 @@ output:
 
 ## 體質
 
-## Genetic variant of ALDH2 makes us get a red face after alcohol
+## 
+### Genetic variant of ALDH2 makes us red face
 
-![](img/tichi_3.png)
+![https://en.wikipedia.org/wiki/Alcohol_flush_reaction](img/tichi_3.png)
 
 ## Some drugs works for parts of people
 
 ![](img/tichi_2.jpg)
 
+## Milestone
+![](img/1000genome.jpg)
+
+#### https://news.embl.de/science/1510-1000genomes/
 
 # Precision Medicine {data-background="img/obama.jpg"}
 
 ## Beginning of the story
 ![](img/beatface.png)
 
-## The advantages of sequencing technologies
-
+##
+### The advantages of sequencing technologies
 ![](img/cost.jpg)
+[https://www.genome.gov/sequencingcostsdata/](https://www.genome.gov/sequencingcostsdata/)
 
 ## Growth of sequencing data
 ![](img/journal.pbio.1002195.g001.png)
@@ -111,8 +127,11 @@ output:
 ![](img/gcp_and_google_genomics.png)
 ![](img/google_genomics_wp.png)
 
-## MSSNG Project (Autism)
+## 
+### MSSNG Project (Autism)
 ![](img/mssng.png)
+
+###### https://www.youtube.com/watch?v=BAAZNH-Wa6A&t=218s
 
 ## Million Veteran Project
 ![](img/veteran.png)
@@ -129,7 +148,50 @@ output:
 # How to use Googe Genomics API?
 
 ## 
-### 萬里之行，始於足下
+### Basic usage - Requirement
+
+> + BigQuery
+> + Genomics API
+> + Cloud Storage
+
+##
+### Create dataset (to get dataset-id)
+
+```
+gcloud alpha genomics datasets create --name my-dataset
+```
+
+
+##
+### Create variantsets (to get variantset-id)
+
+```
+gcloud alpha genomics variantsets create --dataset-id dataset_id --name variantset_name
+```
+
+##
+### Import variants
+
+```
+gcloud alpha genomics variants import --variantset-id variantset_id --source-uris gs://your_bucket/
+```
+
+##
+### Check operation details
+
+```
+gcloud alpha genomics operations describe operations/a_specific_operation_id
+```
+
+##
+### Search a variant set (Genome DB) for variants at a specific location
+![](img/gcp_genomics_api_1.png)
+
+##
+### Search callsets for individuals with calls (including reference calls) at the same location
+![](img/gcp_genomics_api_2.png)
+
+## 萬里之行，始於足下
 ### 要拿到Genetic variants也得從raw reads開始
 
 ## 
